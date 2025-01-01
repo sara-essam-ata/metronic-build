@@ -1,0 +1,93 @@
+//
+// Breadcrumb
+//
+
+// Breadcrumb
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    // Item breadcrumb
+    .breadcrumb-item {
+        display: flex;
+        align-items: center;
+        padding-left: $breadcrumb-item-padding-x;
+
+        position: relative;
+        padding: 20px;
+        /* مساحة داخلية حول المحتوى */
+        background-color: #f8f9fa;
+        /* خلفية العنصر (اختياري) */
+        border-top: 2px solid black;
+        /* الحدود العلوية */
+        border-right: 2px solid black;
+        /* الحدود اليمنى */
+        border-bottom: 2px solid black;
+
+        /* الحدود السفلية */
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &:after {
+            // padding-left: $breadcrumb-item-padding-x;
+            // content: "/";
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-left: 2px solid black;
+            /* الحدود اليسرى (مستقيمة) */
+            transform: rotate(45deg);
+            /* تدوير الزاوية 45 درجة */
+            transform-origin: bottom left;
+            /* تحديد نقطة التدوير لتكون الزاوية السفلى اليسرى */
+        }
+
+        &:before {
+            display: none;
+        }
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+// Breadcrumb line style
+.breadcrumb-line {
+    .breadcrumb-item {
+        &:after {
+            content: "-";
+        }
+    }
+}
+
+// Breadcrumb dot style
+.breadcrumb-dot {
+    .breadcrumb-item {
+        &:after {
+            content: "\2022";
+        }
+    }
+}
+
+// Breadcrumb separatorless style
+.breadcrumb-separatorless {
+    .breadcrumb-item {
+        &:after {
+            display: none;
+        }
+    }
+}

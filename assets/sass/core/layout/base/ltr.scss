@@ -1,0 +1,93 @@
+/* Move Sidebar to the Left for LTR */
+html[dir="ltr"] .app-sidebar {
+    position: fixed;
+    left: 0;
+    /* Moves sidebar to the left side for LTR */
+    right: auto;
+}
+
+/* Change Header position for LTR */
+html[dir="ltr"] .app-header {
+    text-align: left;
+    /* Left-align the header content */
+    position: fixed !important;
+    right: 0 !important;
+    left: 265px;
+}
+
+/* Layout of Content for LTR */
+html[dir="ltr"] .app-main {
+    direction: ltr;
+    /* Ensure content flows left to right */
+    text-align: left;
+    /* Left-align text content */
+    position: absolute !important;
+    right: 0 !important;
+    left: 265px;
+}
+
+/* Optional: Keep the order of elements in the default layout (no reverse) */
+html[dir="ltr"] .app-wrapper {
+    display: flex;
+    flex-direction: row;
+    /* Keep column layout for LTR */
+}
+
+/* Optionally: Engage section remains left-aligned for LTR */
+html[dir="ltr"] .app-engages {
+    // لسه مخلصتش
+    direction: rtl;
+    /* Ensure the engages section is also aligned left to right */
+    text-align: left;
+    position: relative !important;
+    left: 80px !important;
+}
+
+html[dir="ltr"] .app-sidebar-toggle {
+    position: relative !important;
+    right: 0 !important;
+}
+
+html[dir="ltr"] app-scroll-top {
+    direction: rtl !important;
+    /* Ensure the engages section is also aligned left to right */
+    text-align: left;
+    position: fixed !important;
+    left: 95% !important;
+}
+
+// html[dir="ltr"] .menu-sub, .menu-sub, .menu-sub-lg-down-accordion, .menu-sub-lg-dropdown, .menu-dropdown, .menu-link {
+//     z-index: 9999999999999999999999999999999999999999 !important;
+//     direction: rtl !important;
+//     text-align: left !important;
+// }
+
+// @media (min-width: 768px) and (max-width: 1024px) {
+//     .app-sidebar {
+//         // position: fixed !important;
+//         // left: -500px !important;
+//         // /* Moves sidebar to the left side for LTR */
+//         // right: auto !important;
+
+//         // z-index: -999999999999999999999999999999 !important;
+//     }
+// }
+
+// /* إخفاء الـ sidebar في الشاشات الصغيرة التي تقل عن 768px */
+@media (max-width: 1024px) {
+    html[dir="ltr"] .app-sidebar {
+        /* إخفاء الـ sidebar */
+        // position: fixed !important;
+        // left: 0px !important;
+        // /* Moves sidebar to the left side for LTR */
+        // right: auto !important;
+        display: none !important;
+
+    }
+}
+
+
+// }
+
+// /* إظهار الـ sidebar في الشاشات التي تتعدى 1024px */
+// @media (min-width: 1025px) {}

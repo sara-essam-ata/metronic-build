@@ -1,0 +1,25 @@
+.p-inputtext {
+    border: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 0.5px thin #017e84 !important;
+}
+
+.p-breadcrumb {
+    border: none !important;
+    background-color: #f1f1f4;
+    padding: 8px !important;
+    ol {
+        padding: 5px !important;
+        margin: 0 !important;
+        border: none !important;
+        .p-menuitem-separator {
+            color: #017e84 !important;
+        }
+        li {
+            
+        }
+    }
+    
+}
